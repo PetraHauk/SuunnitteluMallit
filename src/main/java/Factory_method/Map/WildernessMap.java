@@ -5,10 +5,10 @@ import Factory_method.Map.Tiles.*;
 import java.util.Random;
 
 public class WildernessMap extends Map {
-    private static final Tile[] wildernessTiles = new Tile[]{ new Forest(), new Swamp(), new Water() };
+    private static final Tile[] wildernessTiles = new Tile[]{ (Tile) new Forest(), (Tile) new Swamp(), (Tile) new Water() };
     private Random random = new Random();
 
-    public WildernessMap() {
+    public WildernessMap(int width, int height) {
         super(width, height);
     }
 

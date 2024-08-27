@@ -20,11 +20,12 @@ public class Game {
 
     public Map createMap(String mapType, int width, int height) {
         if (mapType.equals("city")) {
-            return (Map) new CityMap(width, height);
+            return new CityMap(width, height);
         } else if (mapType.equals("wilderness")) {
-            return (Map) new WildernessMap(width, height);
+            return new WildernessMap(width, height);
         } else {
             System.out.println("Invalid map type");
+            return null;
         }
     }
 }

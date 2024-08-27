@@ -6,8 +6,8 @@ import Factory_method.Map.Tiles.Road;
 
 import java.util.Random;
 
-public class CityMap extends Map{
-    private static final Tile[] cityTiles = new Tile[]{(Tile) new Road(), (Tile) new Building(), (Tile) new Forest()}  ;
+public class CityMap extends Map {
+    private static final Tile[] cityTiles = { new Road(), new Building(), new Forest() };
     private Random random = new Random();
 
     public CityMap(int width, int height) {

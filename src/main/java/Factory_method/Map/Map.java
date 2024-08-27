@@ -5,12 +5,11 @@ abstract class Map {
     int height;
     Tile[][] tiles;
 
-    public Map() {
-        width = 10;
-        height = 10;
+    public Map(int width, int height) {
+        this.width = width;  // Correctly initialize instance variable
+        this.height = height;
         tiles = new Tile[width][height];
     }
-
 
     abstract Tile createTile();
 
