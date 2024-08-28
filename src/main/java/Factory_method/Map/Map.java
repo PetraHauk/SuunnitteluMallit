@@ -1,23 +1,14 @@
 package Factory_method.Map;
 
-abstract class Map {
-    int width;
-    int height;
-    Tile[][] tiles;
-
-    public Map(int width, int height) {
-        this.width = width;  // Correctly initialize instance variable
-        this.height = height;
-        tiles = new Tile[width][height];
-    }
+public abstract class Map {
 
     abstract Tile createTile();
 
-    public void display() {
+    public void display(int width, int height) {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
-                tiles[i][j] = createTile();
-                System.out.print(tiles[i][j].getCharacter());
+                Tile tile = createTile();
+                System.out.print(tile.getCharacter() + " ");
             }
             System.out.println();
         }

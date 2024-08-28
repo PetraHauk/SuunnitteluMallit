@@ -2,27 +2,28 @@ package Factory_method;
 
 import Factory_method.Map.CityMap;
 import Factory_method.Map.WildernessMap;
-
-import java.util.Map;
+import Factory_method.Map.Map;
 
 public class Game {
 
     public static void main(String[] args) {
         Game game = new Game();
-        System.out.println("City Map:");
-        Map cityMap = game.createMap("city", 5, 5);
-        cityMap.display();
 
+        System.out.println("City Map:");
+        Map cityMap = game.createMap("city");
+        cityMap.display(5,5);
+
+        System.out.println();
         System.out.println("Wilderness Map:");
-        Map wildernessMap = game.createMap("wilderness", 5, 5);
-        wildernessMap.display();
+        Map wildernessMap = game.createMap("wilderness");
+        wildernessMap.display(5,5);
     }
 
-    public Map createMap(String mapType, int width, int height) {
+    public Map createMap(String mapType) {
         if (mapType.equals("city")) {
-            return new CityMap(width, height);
+            return (Map) new CityMap();
         } else if (mapType.equals("wilderness")) {
-            return new WildernessMap(width, height);
+            return (Map) new WildernessMap();
         } else {
             System.out.println("Invalid map type");
             return null;

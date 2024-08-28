@@ -7,15 +7,20 @@ import Factory_method.Map.Tiles.Road;
 import java.util.Random;
 
 public class CityMap extends Map {
-    private static final Tile[] cityTiles = { new Road(), new Building(), new Forest() };
     private Random random = new Random();
-
-    public CityMap(int width, int height) {
-        super(width, height);
-    }
 
     @Override
     public Tile createTile() {
-        return cityTiles[random.nextInt(cityTiles.length)];
+        int randomInt = random.nextInt(3);
+        switch (randomInt) {
+            case 0:
+                return new Building();
+            case 1:
+                return new Road();
+            case 2:
+                return new Forest();
+            default:
+                return null;
+        }
     }
 }

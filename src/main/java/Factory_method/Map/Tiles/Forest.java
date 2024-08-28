@@ -1,6 +1,8 @@
 package Factory_method.Map.Tiles;
 
-public class Forest {
+import Factory_method.Map.Tile;
+
+public class Forest implements Tile {
     public char getCharacter() {
         return 'F';
     }

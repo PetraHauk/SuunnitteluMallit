@@ -1,6 +1,8 @@
 package Factory_method.Map.Tiles;
 
-public class Swamp {
+import Factory_method.Map.Tile;
+
+public class Swamp implements Tile {
     public char getCharacter() {
         return 'S';
     }
