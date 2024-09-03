@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class WildernessMap extends Map {
     private Random random = new Random();
-
     @Override
     public Tile createTile() {
         int randomInt = random.nextInt(3);

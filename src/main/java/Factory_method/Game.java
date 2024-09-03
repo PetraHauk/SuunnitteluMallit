@@ -21,9 +21,9 @@ public class Game {
 
     public Map createMap(String mapType) {
         if (mapType.equals("city")) {
-            return (Map) new CityMap();
+            return new CityMap();
         } else if (mapType.equals("wilderness")) {
-            return (Map) new WildernessMap();
+            return new WildernessMap();
         } else {
             System.out.println("Invalid map type");
             return null;
