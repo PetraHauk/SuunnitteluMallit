@@ -1,16 +1,14 @@
 package Abstract_Factory.Buttons;
 
 
-
 public abstract class Button {
     protected String text;
-
     public Button(String text) {
         this.text = text;
     }
+    public abstract void display();
 
-    public String getText() {
-        return text;
+    public void setText(String text) {
+        this.text = text;
     }
-
 }

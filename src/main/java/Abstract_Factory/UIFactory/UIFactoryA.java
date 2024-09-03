@@ -14,12 +14,12 @@ public class UIFactoryA extends UIFactory {
     }
 
     @Override
-    public Checkbox createCheckbox(String text) {
-        return new CheckboxA(text);
+    public TextField createTextField(String text) {
+        return new TextFieldA(text);
     }
 
     @Override
-    public TextField createTextField(String text) {
-        return new TextFieldA(text);
+    public Checkbox createCheckbox(boolean checked) {
+        return new CheckboxA(checked);
     }
 }

@@ -1,15 +1,12 @@
 package Abstract_Factory.Checkbox;
 
 public abstract class Checkbox {
-    protected String text;
-
-    public Checkbox(String text) {
-        this.text = text;
+    protected boolean checked;
+    public Checkbox(boolean checked) {
+        this.checked = checked;
     }
-
-    public String getText() {
-        return text;
-    }
-
     public abstract void display();
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
 }
