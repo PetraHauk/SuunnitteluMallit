@@ -34,10 +34,8 @@ public class Department extends Component {
     public String toXML() {
         StringBuilder xml = new StringBuilder();
         xml.append("<department name=\"").append(name).append("\">");
-        System.out.println("");
         for (Component component : components) {
             xml.append(component.toXML());
-            System.out.println(component.toXML());
         }
         xml.append("</department>");
         return xml.toString();
