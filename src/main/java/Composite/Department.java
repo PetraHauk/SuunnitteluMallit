@@ -33,9 +33,9 @@ public class Department extends Component {
     @Override
     public String toXML() {
         StringBuilder xml = new StringBuilder();
-        xml.append("<department name=\"").append(name).append("\">");
+        xml.append("<department name=\"").append(name).append("\">\n");
         for (Component component : components) {
-            xml.append(component.toXML());
+            xml.append(component.toXML()).append("\n");
         }
         xml.append("</department>");
         return xml.toString();
