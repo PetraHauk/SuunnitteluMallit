@@ -9,11 +9,11 @@ import Abstract_Factory.UIFactory.UIFactoryB;
 
 public class Main {
     public static void main(String[] args) {
-        // UIFactory factory = new UIFactoryA();
-        UIFactory factory = new UIFactoryB();
+        UIFactory factory = new UIFactoryA();
+        // UIFactory factory = new UIFactoryB();
 
-        Button button = factory.createButton("Button A");
-        TextField textField = factory.createTextField("Text Field A - Enter name");
+        Button button = factory.createButton("Button");
+        TextField textField = factory.createTextField("Text Field - Enter name");
         Checkbox checkbox = factory.createCheckbox(true);
 
         button.display();
