@@ -1,0 +1,3 @@
+Hello, world!
+This is a log message.
+Goodbye, world!
