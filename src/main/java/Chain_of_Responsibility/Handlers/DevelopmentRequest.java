@@ -12,7 +12,7 @@ public class DevelopmentRequest extends Handler {
 
     @Override
     protected boolean processMessage(Messege message) {
-        if (message.getMessegeType() == MessegeType.DEVELOPMENT_REQUEST) {
+        if (message.getMessegeType() == MessegeType.DEVELPOMENT_REQUEST) {
             System.out.println("Thank you for your request. Your request is logged and will be processed soon.");
             LocalDate date = LocalDate.now();
             try {

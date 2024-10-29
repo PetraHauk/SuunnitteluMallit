@@ -36,7 +36,7 @@ public class Main {
                 requestType = MessegeType.CONTACT_REQUEST;
                 break;
             case "3":
-                requestType = MessegeType.DEVELOPMENT_REQUEST;
+                requestType = MessegeType.DEVELPOMENT_REQUEST;
                 break;
             case "4":
                 requestType = MessegeType.GENERAL_FEEDBACK;

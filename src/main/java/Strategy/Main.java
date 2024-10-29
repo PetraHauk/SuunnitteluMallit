@@ -43,9 +43,9 @@ public class Main {
     }
 
     private static void meassurePerformance(int[] arr, SortStrategy strategy) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         strategy.sort(arr);
-        long endTime = System.currentTimeMillis();
-        System.out.println("Time taken: " + (endTime - startTime) + " milliseconds");
+        long endTime = System.nanoTime();
+        System.out.println("Time: " + (endTime - startTime) + " ns");
     }
 }
