@@ -9,7 +9,7 @@ public class Road implements Tile {
     }
 
     public Color getColor() {
-        return Color.BROWN;
+        return Color.SANDYBROWN;
     }
 
     public void action() {

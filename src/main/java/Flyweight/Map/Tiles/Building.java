@@ -11,7 +11,7 @@ public class Building implements Tile {
     }
 
     public Color getColor() {
-        return Color.WHEAT;
+        return Color.RED;
     }
     public void action() {
         System.out.println("You are in the building");

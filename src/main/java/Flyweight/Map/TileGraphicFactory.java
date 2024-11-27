@@ -12,11 +12,9 @@ import java.util.Map;
 public class TileGraphicFactory {
     private Map<String, Tile> tileCache = new HashMap<>();
 
-    // Fetch tile from cache or create a new one
     public Tile getTile(String type) {
         Tile tile = tileCache.get(type);
         if (tile == null) {
-            // Instantiate and store the new tile if it's not cached
             switch (type) {
                 case "Building":
                     tile = new Building();

@@ -7,15 +7,14 @@ public class CityMap extends Map {
 
     @Override
     public Tile createTile(TileGraphicFactory factory) {
-        // Randomly choose a tile type from city-specific tiles
-        int randomInt = random.nextInt(3);  // 3 possible tile types in the city map
+        int randomInt = random.nextInt(3);
         switch (randomInt) {
             case 0:
                 return factory.getTile("Building");
             case 1:
                 return factory.getTile("Road");
             default:
-                return factory.getTile("Forest");  // Default tile type
+                return factory.getTile("Forest");
         }
     }
 }

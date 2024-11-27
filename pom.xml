@@ -33,22 +33,37 @@
 
     <build>
         <plugins>
-            <!-- JavaFX Maven plugin to run JavaFX applications -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.5</version> <!-- Ensure this version is compatible with your Java version -->
-                <configuration>
-                    <mainClass>Flyweight.Game</mainClass> <!-- Specify your main class here -->
-                </configuration>
+                <version>0.0.5</version>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>run</goal> <!-- This goal is used to run your JavaFX app -->
+                            <goal>run</goal>
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>${mainClass}</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>flyweight</id>
+            <properties>
+                <mainClass>Flyweight.Game</mainClass> <!-- Main class for Flyweight -->
+            </properties>
+        </profile>
+
+        <profile>
+            <id>mediator</id>
+            <properties>
+                <mainClass>Mediator.Main</mainClass> <!-- Main class for Mediator -->
+            </properties>
+        </profile>
+    </profiles>
 </project>
