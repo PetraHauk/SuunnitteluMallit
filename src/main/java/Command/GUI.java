@@ -37,7 +37,6 @@ public class GUI extends Application {
         GridPane grid = createGrid(togglePixels);
         CreateCodeCommand createCode = new CreateCodeCommand(grid);
 
-        // Cursor indicator
         Rectangle cursor = new Rectangle(30, 30, Color.TRANSPARENT);
         cursor.setStroke(Color.RED);
         cursor.setStrokeWidth(2);
@@ -46,7 +45,6 @@ public class GUI extends Application {
 
         Scene scene = new Scene(vbox);
 
-        // Add event handlers
         scene.setOnKeyPressed(e -> {
             KeyCode code = e.getCode();
             switch (code) {

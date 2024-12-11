@@ -7,6 +7,7 @@ public class PixelOnCommand implements Command {
     private TogglePixels togglePixels;
     private int[] cursorPosition;
 
+
     public PixelOnCommand(TogglePixels togglePixels, int[] cursorPosition) {
         this.togglePixels = togglePixels;
         this.cursorPosition = cursorPosition;
